@@ -1,7 +1,8 @@
 :root {
     --text-color: #343638;
+    --main-title-color: #000;
     --border-color: #9E9E9E;
-    --background-color: #FFF;
+    --background-color: rgb(236, 234, 211);
     --active-color: rgb(42, 99, 242);
 }
 
@@ -14,6 +15,7 @@
 body {
     font-family: 'Montserrat', sans-serif;
     color: var(--text-color);
+    background-color: var(--background-color);
 }
 
 ul {
@@ -25,7 +27,8 @@ ul {
 a {
     display: block;
     text-decoration: none;
-    cursor: pointer;
+    width: 100%;
+   
 }
 
 h1,
@@ -34,25 +37,186 @@ h2 {
 }
 
 .container {
-    padding-left: 10px;
-    padding-right: 10px;
+   padding: 15px;
     margin: 0 auto;
     width: 320px;
 
 }
+
+input {
+  visibility: hidden;
+}
+
     @media screen and (min-width: 820px) {
         .container {
-            padding-left: 15px;
-            padding-right: 15px;
         width: 820px;
         }
     }
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 1920px) {
         .container {
         width: 1920px;
+        padding: 20px;
         }
     }
+
+    h1 {
+        font-size: 2.5em;
+    font-weight: 700;
+        line-height: 1.7;
+
+        color: var(--main-title-color);
+       
+        border-bottom: 0.07em solid var(--border-color);
+    margin-bottom: 0.8em;
+    }
+
+    @media screen and (min-width: 820px) {
+h1 {
+    font-size: 3em;
+    line-height: 2;
+    margin-bottom: 1em;
+}
+    }
+
+                @media screen and (min-width: 1920px) {
+                    h1 {
+                        font-size: 3.7em;
+                        line-height: 2.2;
+                        margin-bottom: 1.6em;
+                    }
+                }
+
+
+        label {
+            font-size: 1.5em;
+            font-weight: 700;
+            line-height: 1.8;
+    
+            color: var(--active-color);
+        }
+    
+        @media screen and (min-width: 820px) {
+            label {
+                font-size: 2em;
+                line-height: 2;
+                
+            }
+        }
+    
+        @media screen and (min-width: 1920px) {
+            label {
+                font-size: 2.3em;
+                line-height: 2.2;
+            }
+        }
+
+        .wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            border-bottom: 0.22em solid var(--border-color);
+                margin-bottom: 0.4em;
+        }
+
+        @media screen and (min-width: 820px) {
+            .wrap {
+margin-bottom: 0.8em;
+            }
+        }
+
+            @media screen and (min-width: 1920px) {
+                .wrap {
+                        margin-bottom: 1.1em;
+                }
+            }
+
+
+            .icon {
+                width: 4%;
+            }
+
+            .plus,
+            .cross {
+                display: none;
+            }
+            
+            
+           
+
+            .meme-block {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .icon-meme {
+                padding: 0.4em;
+                width: 40%;
+
+                border: 0.3em solid rgb(62, 87, 227);
+                background-color: rgb(169, 222, 243);
+            }
+
+            @media screen and (min-width: 820px) {
+label {
+    display: block;
+    cursor: pointer;
+}
+
+
+                .icon-meme {
+                    display: none;
+                }
+
+                                 input:checked ~ .icon-meme {
+                                     display: block;
+                                 }
+
+                .meme-first {
+                    display: block;
+                }
+
+                .link-first label {
+                    color: var(--text-color);
+                }
+
+                a:hover .icon-meme {
+                    display: block;
+                }
+
+               a:hover label {
+                color: var(--text-color);
+               }
+
+               body:hover .plus {
+display: block;
+               }
+
+               body:hover .link-first .plus {
+                display: none;
+               }
+
+                                body:hover .link-first .cross {
+                                    display: block;
+                                }
+
+               a:hover .cross {
+                display: block;
+               }
+
+               a:hover .plus {
+                display: none;
+               }
+
+               a:active .icon-meme {
+                background-color: #9E9E9E;
+               }
+
+               
+
+            }
 
 
 
