@@ -28,7 +28,6 @@ a {
     display: block;
     text-decoration: none;
     width: 100%;
-   
 }
 
 h1,
@@ -140,6 +139,7 @@ margin-bottom: 0.8em;
             .plus,
             .cross {
                 display: none;
+                transition: display 250ms linear;
             }
             
             
@@ -149,6 +149,7 @@ margin-bottom: 0.8em;
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                transition: transform 300ms linear;
             }
 
             .icon-meme {
@@ -157,17 +158,21 @@ margin-bottom: 0.8em;
 
                 border: 0.3em solid rgb(62, 87, 227);
                 background-color: rgb(169, 222, 243);
+
+                transition: transform 300ms linear;
             }
 
             @media screen and (min-width: 820px) {
 label {
     display: block;
     cursor: pointer;
+    transition: color 250ms linear;
 }
 
 
                 .icon-meme {
                     display: none;
+                    transition: transform 300ms linear;
                 }
 
                                  input:checked ~ .icon-meme {
@@ -184,6 +189,7 @@ label {
 
                 a:hover .icon-meme {
                     display: block;
+                    transform: scale(1);
                 }
 
                a:hover label {
